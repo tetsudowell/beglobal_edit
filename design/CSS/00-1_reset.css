@@ -1,0 +1,52 @@
+/* =========================
+Reset CSS
+========================= */
+
+/* box-sizingを統一 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 余白リセット */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* リストの点を消す */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 画像の余白対策 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* リンクの下線など */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* フォーム要素のフォント統一 */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}

@@ -1,0 +1,156 @@
+
+h1{
+    color:#191970;
+    font-size:28px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #191970;
+    font-size: 24px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+h3 {
+    color: #191970;
+    font-size: 20px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #191970;
+    font-size: 16px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+ul {
+    color: #191970;
+    font-size: 16px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+li {
+    color: #191970;
+    font-size: 16px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+header ul {
+    color: #191970;
+    font-size: 16px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+header li {
+    color: #191970;
+    font-size: 16px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #191970;
+    font-size: 14px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+small {
+    color: #191970;
+    font-size: 9px;
+    font-family: "Inter", Hiragino Kaku Gothic ProN, sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    background-color: #E0FFFF;
+}
+
+.header-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.hamburger{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hamburger .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #191970;
+    transition: all 0.3s ease-in-out;
+}
+
+.global-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 8px 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.global-nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.global-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
