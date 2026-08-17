@@ -1,0 +1,25 @@
+
+h2 {
+    margin-bottom: 50px;
+}
+
+.AttentionList {
+    list-style: none;
+    padding-left: 0;
+}
+
+.AttentionList li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.AttentionList li:last-child {
+    margin-bottom: 50px;
+}
+
+.AttentionList li::before {
+    content: "⚠️";
+    flex-shrink: 0;
+    margin-right: 8px;
+}
