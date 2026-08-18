@@ -1,0 +1,14 @@
+.DocumentList ul {
+    list-style: disc;
+    padding-left: 3em;
+    margin-bottom: 30px;
+}
+
+.DocumentList li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.DocumentList li:last-child {
+    margin-bottom: 0;
+}

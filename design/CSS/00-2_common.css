@@ -1,7 +1,7 @@
 /* 変数⇨body⇨container⇨header⇨footer⇨フォント⇨ボタンの順に記載 */
 
 :root {
-    --side-padding: 60px;
+    --side-padding: 50px;
     --div-space: 30px;
     --content-width: 1200px;
     --text-width: 720px;
@@ -21,6 +21,22 @@ body {
             var(--content-width));
     padding: var(--div-space) var(--side-padding);
     margin: 20px auto;
+}
+
+.PageTitle {
+    position:relative
+}
+
+.PageTitle h1{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    margin:0;
+    padding: 10px 0px 10px 2em;
+
+    background: rgba(230, 230, 230, 0.7);
 }
 
 header {
@@ -176,6 +192,11 @@ header li {
     margin-bottom: 8px;
 }
 
+.LinkList {
+    font-weight: bold;
+    font-size:30px
+}
+
 .highlight_p {
     color: #FF00FF;
     font-weight: none;
@@ -195,6 +216,7 @@ header li {
     margin-bottom:20px;
     width: 100%;
     background-color: #191970;
+    font-size: 25px;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;

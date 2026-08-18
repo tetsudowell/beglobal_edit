@@ -1,0 +1,13 @@
+
+.Scholarship {
+    background-color: #DDDDDD;
+    width: 100%;
+    padding: 20px;
+    border: 3px dashed #808080;
+    margin: 50px auto 30px;
+}
+
+.btn li {
+    font-size: 13px;
+    padding-left: 3em;
+}

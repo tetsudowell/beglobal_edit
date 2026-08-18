@@ -1,0 +1,33 @@
+
+.ProgramConditions {
+    list-style: disc;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.ProgramConditions li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.ProgramConditions li:last-child {
+    margin-bottom: 0;
+}
+
+.flex-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.container1 p {
+    font-size: 20px;
+    margin: auto 20px
+}
+
+.container2 {
+    margin-bottom: 70px;
+}
