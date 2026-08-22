@@ -1,35 +1,30 @@
-/* 変数⇨body⇨container⇨header⇨footer⇨フォント⇨ボタンの順に記載 */
+/* ページ余白レイアウト⇨headerfooter⇨フォント⇨ボタン⇨ギミックの順に記載 */
 
-:root {
-    --side-padding: 50px;
-    --div-space: 30px;
-    --content-width: 1200px;
-    --text-width: 720px;
-}
 
 body {
     margin: 0;
     color: #191970;
     background-color: #f5f5f5;
-    font-family: var(--font-main);
     font-size: 16px;
     line-height: 1.8;
 }
 
 .container {
-    width: min(calc(100% - var(--side-padding) * 2),
-            var(--content-width));
-    padding: var(--div-space) var(--side-padding);
+    width: min(1200px, calc(100% - 100px));
+    padding: 30px 50px;
     margin: 20px auto;
 }
+
 
 .PageTitle {
     position:relative
 }
 
 .PageTitle h1{
+    z-index: 10;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 100%;
     transform: translateY(-50%);
@@ -37,13 +32,6 @@ body {
     padding: 10px 0px 10px 2em;
 
     background: rgba(230, 230, 230, 0.7);
-}
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #777;
 }
 
 .flex-container {
@@ -57,74 +45,6 @@ header {
 .header-logo img {
     width: 120px;
     height: auto;
-}
-
-/* ヘッダーのギミックと素材 */
-.hamburger {
-    position: relative;
-    z-index: 100;
-    width: 50px;
-    height: 50px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-}
-.hamburger .bar {
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #000;
-    margin: 6px auto;
-    transition: 0.3s;
-}
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-.global-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 40%;
-    max-width: 300px;
-    height: 100vh;
-    background-color: #191970;
-    transition: right 0.4s ease;
-    z-index: 90;
-}
-.global-nav.open {
-    right: 0;
-}
-.global-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-    padding: 135px 30px 30px 30px;
-    margin: 0;
-}
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s ease;
-    z-index: 80;
-}
-.menu-overlay.open {
-    opacity: 1;
-    visibility: visible;
 }
 
 footer {
@@ -208,7 +128,6 @@ header li {
     text-decoration: underline;
 }
 
-
 /* ボタン：リンク */
 .btn {
     display: inline-block;
@@ -221,4 +140,180 @@ header li {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+}
+
+
+
+
+/* ギミック：ハンバーガーメニュー */
+
+.hamburger {
+    position: relative;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    margin: 6px auto;
+    transition: 0.3s;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.global-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #191970;
+    transition: right 0.4s ease;
+    z-index: 90;
+}
+
+.global-nav.open {
+    right: 0;
+}
+
+.global-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 135px 30px 30px 30px;
+    margin: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    z-index: 80;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* ギミック：カルーセル */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide:first-child {
+    position: relative;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: transform 7s ease;
+}
+
+.slide.active img{
+    transform: scale(1.05)
+}
+
+/* 左右のボタン */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+
+/* ドット */
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.dot.active {
+    opacity: 1;
 }
